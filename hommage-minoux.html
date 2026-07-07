@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journées d'hommage à Michel Minoux — 17-18 septembre 2026, LIP6</title>
+<style>
+  :root {
+    --ink: #1c2430;
+    --ink-soft: #4a5566;
+    --paper: #faf9f6;
+    --paper-line: #dcd8cf;
+    --accent: #7a1f2b;
+    --accent-soft: #f2e6e4;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+    line-height: 1.65;
+  }
+
+  .rule {
+    border: none;
+    border-top: 1px solid var(--paper-line);
+    margin: 0;
+  }
+
+  header.masthead {
+    padding: 4.5rem 1.5rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .eyebrow {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    color: var(--accent);
+    margin-bottom: 1.1rem;
+  }
+
+  h1.name {
+    font-size: clamp(2.1rem, 5vw, 3.1rem);
+    font-weight: 400;
+    margin: 0 0 0.6rem;
+    letter-spacing: 0.01em;
+  }
+
+  .years {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .dates-loc {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--ink);
+    display: inline-flex;
+    gap: 0.6rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dates-loc .sep {
+    color: var(--paper-line);
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3.2rem 1.5rem 1rem;
+  }
+
+  main p {
+    font-size: 1.08rem;
+    color: var(--ink);
+    margin: 0 0 1.4rem;
+  }
+
+  main p:first-of-type::first-letter {
+    font-size: 2.6rem;
+    float: left;
+    line-height: 0.85;
+    padding-right: 0.35rem;
+    padding-top: 0.15rem;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .organizer-note {
+    margin-top: 2.2rem;
+    padding: 1.3rem 1.5rem;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  .organizer-note strong {
+    color: var(--ink);
+  }
+
+  .speakers {
+    margin-top: 3rem;
+  }
+
+  .speakers h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 1.2rem;
+  }
+
+  .speakers p.intro {
+    font-size: 1.08rem;
+    margin: 0 0 1.2rem;
+  }
+
+  .speaker-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: 2.2rem;
+  }
+
+  .speaker-list li {
+    font-size: 1.02rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--paper-line);
+    break-inside: avoid;
+  }
+
+  .speaker-list li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 480px) {
+    .speaker-list { columns: 1; }
+  }
+
+  .cta-wrap {
+    max-width: 680px;
+    margin: 2.8rem auto 4rem;
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  .cta {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    display: inline-block;
+    background: var(--accent);
+    color: var(--paper);
+    text-decoration: none;
+    padding: 0.85rem 2.2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+  }
+
+  .cta:hover, .cta:focus-visible {
+    background: #5c1620;
+  }
+
+  .cta:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+
+  .cta-sub {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 0.9rem;
+  }
+
+  .cta-sub + .cta-sub {
+    margin-top: 0.3rem;
+  }
+
+  footer {
+    border-top: 1px solid var(--paper-line);
+    padding: 2.8rem 1.5rem 3.2rem;
+  }
+
+  .footer-label {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.68rem;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .logo-slot {
+    width: 150px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-slot img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+
+  @media (max-width: 480px) {
+    header.masthead { padding: 3.2rem 1.2rem 2.2rem; }
+    main { padding: 2.2rem 1.2rem 1rem; }
+    .logos { gap: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="eyebrow">Journées d'hommage</div>
+  <h1 class="name">Michel Minoux</h1>
+  <div class="years">In memoriam — Professeur émérite, LIP6, Sorbonne Université</div>
+  <div class="dates-loc">
+    <span>17 – 18 septembre 2026</span>
+    <span class="sep">·</span>
+    <span>LIP6, Sorbonne Université</span>
+  </div>
+</header>
+
+<main>
+  <p>
+    Michel Minoux, professeur émérite au LIP6 (Sorbonne Université) et chercheur
+    de renommée internationale en recherche opérationnelle, nous a quittés en
+    septembre 2023.
+  </p>
+
+  <p>
+    Ancien élève de l'École Polytechnique et de Télécom Paris, il a mené
+    l'essentiel de sa carrière scientifique au CNET (Centre National d'Études
+    des Télécommunications), à l'Université Paris IX-Dauphine puis au LIP6, où
+    il a dirigé l'axe de recherche « Optimisation des grands systèmes » au
+    sein de l'équipe DECISION. Auteur de plus d'une centaine d'articles et de
+    plusieurs ouvrages de référence, dont
+    <em>Programmation Mathématique&nbsp;: théorie et algorithmes</em> et
+    <em>Graphes et algorithmes</em>, il a marqué durablement notre discipline,
+    tant par ses apports théoriques que par son attention constante aux
+    applications industrielles.
+  </p>
+
+  <p>
+    Ces deux journées lui rendront hommage à travers des témoignages et des
+    présentations scientifiques dans la continuité de ses travaux.
+  </p>
+
+  <div class="organizer-note">
+    <strong>Organisation&nbsp;:</strong> ces journées sont organisées par le
+    groupe de travail Optimisation dans les Réseaux du GDR ROD
+    (Recherche Opérationnelle et Décision, CNRS), avec le soutien du LIP6 et
+    de la ROADEF.
+  </div>
+
+  <div class="speakers">
+    <h2>Orateurs confirmés</h2>
+    <p class="intro">
+      Plusieurs collègues et proches de Michel Minoux ont d'ores et déjà
+      confirmé leur participation, parmi lesquels&nbsp;:
+    </p>
+    <ul class="speaker-list">
+      <li>Céline Gicquel</li>
+      <li>Brigitte Jaumard</li>
+      <li>Abdel Lisser</li>
+      <li>Nelson Maculan</li>
+      <li>Patrice Perny</li>
+      <li>Celso Ribeiro</li>
+      <li>Benoit Rottembourg</li>
+      <li>Wim Van Ackooij</li>
+      <li>Riadh Zorgati</li>
+    </ul>
+  </div>
+</main>
+
+<div class="cta-wrap">
+  <a class="cta" href="https://docs.google.com/forms/d/1W35Gze1FYIuqqayCFOIwDCs4x8xF3yoNawx5fUmbHBQ/edit" target="_blank" rel="noopener">
+    S'inscrire aux journées
+  </a>
+  <div class="cta-sub">Formulaire d'inscription en ligne</div>
+  <div class="cta-sub">L'inscription est gratuite mais obligatoire pour des raisons logistiques.</div>
+</div>
+
+<hr class="rule">
+
+<footer>
+  <div class="footer-label">Organisé par / avec le soutien de</div>
+  <div class="logos">
+    <div class="logo-slot"><img src="logo_GDR_ROD.png" alt="GDR ROD - Groupement de recherche Recherche Opérationnelle et Décision, CNRS"></div>
+    <div class="logo-slot"><img src="logo_lip6.png" alt="LIP6"></div>
+    <div class="logo-slot"><img src="logo_roadef_org.png" alt="ROADEF - Société française de recherche opérationnelle et d'aide à la décision"></div>
+  </div>
+</footer>
+
+</body>
+</html>
